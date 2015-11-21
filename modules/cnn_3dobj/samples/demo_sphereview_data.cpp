@@ -100,7 +100,8 @@ int main(int argc, char *argv[])
     "{rgb_use | 0 | Use RGB image or grayscale. }"
     "{num_class | 6 | Total number of classes of models. }"
     "{binary_out | 0 | Produce binaryfiles for images and label. }"
-    "{view_region | 0 | Take a special view of front or back angle}";
+    "{view_region | 0 | Take a special view of front or back angle}"
+    "{obj_dist | 270 | camera distance}";
     /* Get parameters from comand line. */
     cv::CommandLineParser parser(argc, argv, keys);
     parser.about("Generating training data for CNN with triplet loss");
@@ -127,14 +128,13 @@ int main(int argc, char *argv[])
     int num_class = parser.get<int>("num_class");
     int binary_out = parser.get<int>("binary_out");
     int view_region = parser.get<int>("view_region");
-    double obj_dist, bg_dist, y_range;
+    double obj_dist = parser.get<double>("obj_dist");
+    double bg_dist, y_range;
     if (view_region == 1 || view_region == 2)
     {
         /* Set for TV */
         if (label_class == 12)
             obj_dist = 340;
-        else
-            obj_dist = 250;
         ite_depth = ite_depth + 1;
         bg_dist = 700;
         y_range = 0.85;
@@ -196,7 +196,7 @@ int main(int argc, char *argv[])
         {
             for (int pose = 0; pose < static_cast<int>(campos_temp.size()); pose++)
             {
-                if (campos_temp.at(pose).z < 0.2 && campos_temp.at(pose).z > -0.2 && campos_temp.at(pose).y < -y_range)
+                if (campos_temp.at(pose).z < 0.2 && campos_temp.at(pose).z > -0.1 && campos_temp.at(pose).y < -y_range)
                     campos.push_back(campos_temp.at(pose));
             }
         }
@@ -204,7 +204,7 @@ int main(int argc, char *argv[])
         {
             for (int pose = 0; pose < static_cast<int>(campos_temp.size()); pose++)
             {
-                if (campos_temp.at(pose).z < 0.2 && campos_temp.at(pose).z > -0.2 && campos_temp.at(pose).y > y_range)
+                if (campos_temp.at(pose).z < 0.2 && campos_temp.at(pose).z > -0.1 && campos_temp.at(pose).y > y_range)
                 campos.push_back(campos_temp.at(pose));
             }
         }
@@ -273,6 +273,7 @@ int main(int argc, char *argv[])
             // double alpha2 = rand()%(314*2)/100;
             // printf("%f %f %f/n", ceil(10000*sqrt(1 - sin(alpha1)*sin(alpha1))*sin(alpha2)), 10000*sqrt(1 - sin(alpha1)*sin(alpha1))*cos(alpha2), sin(alpha1)*10000);
             // myWindow.addLight(Vec3d(10000*sqrt(1 - sin(alpha1)*sin(alpha1))*sin(alpha2),10000*sqrt(1 - sin(alpha1)*sin(alpha1))*cos(alpha2),sin(alpha1)*10000), Vec3d(0,0,0), viz::Color::white(), viz::Color::white(), viz::Color::black(), viz::Color::white());
+            //myWindow.addLight(Vec3d(1000,1000,10000), Vec3d(0,0,0), viz::Color::white(), viz::Color::white(), viz::Color::black(), viz::Color::white());
             int label_x, label_y, label_z;
             label_x = static_cast<int>(campos.at(pose).x*100);
             label_y = static_cast<int>(campos.at(pose).y*100);
@@ -285,7 +286,7 @@ int main(int argc, char *argv[])
             /* Get the pose of the camera using makeCameraPoses. */
             if (view_region != 0)
             {
-                cam_focal_point.x = cam_focal_point.y - label_x/5;
+                cam_focal_point.x = cam_focal_point.y - label_x/3;
             }
             Affine3f cam_pose = viz::makeCameraPose(campos.at(pose)*obj_dist+cam_focal_point, cam_focal_point, cam_y_dir*obj_dist+cam_focal_point);
             /* Get the transformation matrix from camera coordinate system to global. */
@@ -307,7 +308,7 @@ int main(int argc, char *argv[])
             /* Visualize widget. */
             if (bakgrdir.size() != 0)
             {
-                cv::Mat img_bg = cv::imread(name_bkg.at(rand()%name_bkg.size()));
+                cv::Mat img_bg = cv::imread(name_bkg.at(rand()%name_bkg.size()),1);
                 /* Back ground images has a distance of 2 times of radius of camera view distance */
                 cv::viz::WImage3D background_widget(img_bg, Size2d(image_size*4.2, image_size*4.2), Vec3d(-campos.at(pose)*bg_dist+cam_focal_point), Vec3d(campos.at(pose)*bg_dist-cam_focal_point), Vec3d(0,0,-1)*bg_dist+Vec3d(0,2*cam_focal_point.y,0));
                 myWindow.showWidget("bgwidget", background_widget, cloud_pose_global);
