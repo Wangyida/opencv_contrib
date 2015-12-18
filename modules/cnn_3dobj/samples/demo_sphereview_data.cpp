@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
     "{semisphere | 1 | Camera only has positions on half of the whole sphere. }"
     "{z_range | 0.6 | Maximum camera position on z axis. }"
     "{center_gen | 0 | Find center from all points. }"
-    "{image_size | 128 | Size of captured images. }"
+    "{image_size | 227 | Size of captured images. }"
     "{label_class |  | Class label of current .ply model. }"
     "{label_item |  | Item label of current .ply model. }"
     "{rgb_use | 0 | Use RGB image or grayscale. }"
@@ -136,12 +136,15 @@ int main(int argc, char *argv[])
         if (label_class == 12)
             obj_dist = 340;
         ite_depth = ite_depth + 1;
-        bg_dist = 700;
+        bg_dist = 550;
         y_range = 0.85;
     }
     else if (view_region == 0)
     {
-        obj_dist = 370;
+        if (label_class !=4)
+        {
+            obj_dist = 370;
+        }
         bg_dist = 400;
     }
     if (label_class == 5 | label_class == 10 | label_class == 11 | label_class == 12)
@@ -226,7 +229,7 @@ int main(int argc, char *argv[])
     /* Set window size. */
     myWindow.setWindowSize(Size(image_size,image_size));
     /* Set background color. */
-    myWindow.setBackgroundColor(viz::Color::gray());
+    myWindow.setBackgroundColor(viz::Color::black());
     myWindow.spin();
     /* Create a Mesh widget, loading .ply models. */
     viz::Mesh objmesh = viz::Mesh::load(plymodel);
@@ -273,7 +276,7 @@ int main(int argc, char *argv[])
             // double alpha2 = rand()%(314*2)/100;
             // printf("%f %f %f/n", ceil(10000*sqrt(1 - sin(alpha1)*sin(alpha1))*sin(alpha2)), 10000*sqrt(1 - sin(alpha1)*sin(alpha1))*cos(alpha2), sin(alpha1)*10000);
             // myWindow.addLight(Vec3d(10000*sqrt(1 - sin(alpha1)*sin(alpha1))*sin(alpha2),10000*sqrt(1 - sin(alpha1)*sin(alpha1))*cos(alpha2),sin(alpha1)*10000), Vec3d(0,0,0), viz::Color::white(), viz::Color::white(), viz::Color::black(), viz::Color::white());
-            //myWindow.addLight(Vec3d(1000,1000,10000), Vec3d(0,0,0), viz::Color::white(), viz::Color::white(), viz::Color::black(), viz::Color::white());
+            // myWindow.addLight(Vec3d(0,0,10000), Vec3d(0,0,0), viz::Color::white(), viz::Color::white(), viz::Color::black(), viz::Color::white());
             int label_x, label_y, label_z;
             label_x = static_cast<int>(campos.at(pose).x*100);
             label_y = static_cast<int>(campos.at(pose).y*100);
@@ -305,14 +308,13 @@ int main(int argc, char *argv[])
                 myWindow.showWidget("CPW_FRUSTUM", cpw_frustum, cam_pose);
             }
 
-            /* Visualize widget. */
+            /* Visualize widget.
             if (bakgrdir.size() != 0)
             {
                 cv::Mat img_bg = cv::imread(name_bkg.at(rand()%name_bkg.size()),1);
-                /* Back ground images has a distance of 2 times of radius of camera view distance */
-                cv::viz::WImage3D background_widget(img_bg, Size2d(image_size*4.2, image_size*4.2), Vec3d(-campos.at(pose)*bg_dist+cam_focal_point), Vec3d(campos.at(pose)*bg_dist-cam_focal_point), Vec3d(0,0,-1)*bg_dist+Vec3d(0,2*cam_focal_point.y,0));
+                cv::viz::WImage3D background_widget(img_bg, Size2d(image_size*2, image_size*2), Vec3d(-campos.at(pose)*bg_dist+cam_focal_point), Vec3d(campos.at(pose)*bg_dist-cam_focal_point), Vec3d(0,0,-1)*bg_dist+Vec3d(0,2*cam_focal_point.y,0));
                 myWindow.showWidget("bgwidget", background_widget, cloud_pose_global);
-            }
+            }*/
             // mesh_widget.setRenderingProperty(viz::LINE_WIDTH, 4.0);
             myWindow.showWidget("targetwidget", mesh_widget, cloud_pose_global);
 

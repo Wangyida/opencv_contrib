@@ -21,21 +21,29 @@
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/boat/05.ply -label_class=3 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/boat/ -z_range=0.6
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/boat/06.ply -label_class=3 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/boat/ -z_range=0.6
 
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/01.ply -label_class=4 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/02.ply -label_class=4 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/03.ply -label_class=4 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/04.ply -label_class=4 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/05.ply -label_class=4 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/06.ply -label_class=4 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/07.ply -label_class=4 -label_item=7 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/08.ply -label_class=4 -label_item=8 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.5
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/01.ply -label_class=4 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/02.ply -label_class=4 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/03.ply -label_class=4 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/04.ply -label_class=4 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/05.ply -label_class=4 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/06.ply -label_class=4 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/07.ply -label_class=4 -label_item=7 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/08.ply -label_class=4 -label_item=8 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=370
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/01.ply -label_class=4 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/02.ply -label_class=4 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/03.ply -label_class=4 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/04.ply -label_class=4 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/05.ply -label_class=4 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/06.ply -label_class=4 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/07.ply -label_class=4 -label_item=7 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bottle/08.ply -label_class=4 -label_item=8 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bottle/ -z_range=0.6 -ite_depth=3 -obj_dist=420
 
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/01.ply -label_class=5 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/02.ply -label_class=5 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/03.ply -label_class=5 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/04.ply -label_class=5 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/05.ply -label_class=5 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/06.ply -label_class=5 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.2
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/01.ply -label_class=5 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/02.ply -label_class=5 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/03.ply -label_class=5 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/04.ply -label_class=5 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/05.ply -label_class=5 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/bus/06.ply -label_class=5 -label_item=6 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/bus/ -z_range=0.3
 
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/car/01.ply -label_class=6 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/car/ -z_range=0.5
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/car/02.ply -label_class=6 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/car/ -z_range=0.5
@@ -72,11 +80,11 @@
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/diningtable/11.ply -label_class=8 -label_item=11 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/diningtable/ -z_range=0.6
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/diningtable/12.ply -label_class=8 -label_item=12 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/diningtable/ -z_range=0.6
 
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/01.ply -label_class=9 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/02.ply -label_class=9 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/03.ply -label_class=9 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/04.ply -label_class=9 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.5
-./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/05.ply -label_class=9 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.5
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/01.ply -label_class=9 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.6
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/02.ply -label_class=9 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.6
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/03.ply -label_class=9 -label_item=3 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.6
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/04.ply -label_class=9 -label_item=4 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.6
+./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/motorbike/05.ply -label_class=9 -label_item=5 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/motorbike/ -z_range=0.6
 
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/sofa/01.ply -label_class=10 -label_item=1 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/sofa/ -z_range=0.6
 ./sphereview_test -plymodel=/Users/yidawang/Documents/database/PASCAL3D+_release1.1/CAD/sofa/02.ply -label_class=10 -label_item=2 -bakgrdir=/Users/yidawang/Documents/database/backgrd_flickr/sofa/ -z_range=0.6
